@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    <p>
+        <a href="/">HOME</a>  | 
+        <a href="posts">ALL POSTS</a> 
+        <h1>ALL POSTS</h1>
+    </p>
+    <div class="row">
+    <% data.forEach(e => { %>
+     <div class="col-sm-4">
+         <%= e.title %>
+     </div>
+     <div class="col-sm-8">
+         <%= e.body %>
+     </div>
+     <% }) %>
+    </div>
+</div>
