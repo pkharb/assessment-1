@@ -4,7 +4,7 @@ const
     app = express(),
     path = require('path'),
     logger = require('morgan'),
-    port = process.env.PORT || 3000,
+    PORT = process.env.PORT || 3000,
     ejs = require('ejs'),
     ejsLayouts = require('express-ejs-layouts'),
     axios = require('axios');
@@ -36,6 +36,6 @@ app.get('/posts', (req,res) => {
 });
 
 // listen to port
-app.listen(port, err => {
-    console.log(err || 'listening to port:' + port)
+app.listen(PORT, err => {
+    console.log(err || `listening to port: ${PORT}`);
 })
