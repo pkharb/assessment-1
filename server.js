@@ -1,9 +1,10 @@
+require('dotenv').config();
 const  
     express = require('express'),
     app = express(),
     path = require('path'),
     logger = require('morgan'),
-    PORT = 3000,
+    port = process.env.PORT || 3000,
     ejs = require('ejs'),
     ejsLayouts = require('express-ejs-layouts'),
     axios = require('axios');
@@ -35,6 +36,6 @@ app.get('/posts', (req,res) => {
 });
 
 // listen to port
-app.listen(PORT, err => {
-    console.log(err || `listening to port: ${PORT}`)
+app.listen(port, err => {
+    console.log(err || 'listening to port:' + port)
 })
